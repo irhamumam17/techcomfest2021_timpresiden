@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/dimen_16"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.investor.portfolio.AddUpdatePortfolioActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/black"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="Portofolio" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dimen_16">
+
+            <include layout="@layout/item_proyek"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="@dimen/dimen_32"
+                app:cardUseCompatPadding="true"
+                app:contentPaddingBottom="16dp"
+                app:contentPaddingTop="@dimen/dimen_16"
+                app:contentPaddingLeft="8dp"
+                app:contentPaddingRight="8dp" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_icon_cost_aup"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/kambing"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/green" />
+
+                    <TextView
+                        android:id="@+id/tv_title_cost_aup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Biaya per ekor ternak"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toEndOf="@+id/img_icon_cost_aup"
+                        app:layout_constraintTop_toTopOf="@+id/img_icon_cost_aup" />
+
+                    <TextView
+                        android:id="@+id/tv_cost_aup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/loading_rupiah"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font_md"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_title_cost_aup" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_helper_aup"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="@dimen/dimen_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 50.000 adalah biaya satu ekor hewan selama satu periode proyek. Silakan masukkan berapa jumlah hewan yang ingin Anda investasikan."/>
+
+            <EditText
+                android:id="@+id/edt_count_aup"
+                style="@style/EditText"
+                android:layout_marginHorizontal="@dimen/dimen_32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Jumlah ekor ternak"
+                android:layout_marginVertical="4dp"
+                android:inputType="number"/>
+
+            <include
+                layout="@layout/item_total_cost"
+                android:layout_marginHorizontal="@dimen/dimen_32"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <include
+                layout="@layout/item_simulation"
+                android:layout_marginHorizontal="@dimen/dimen_32"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_payment_aup"
+                style="@style/Button.Primary"
+                android:layout_marginVertical="24dp"
+                android:layout_marginHorizontal="@dimen/dimen_32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lanjut Pembayaran"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

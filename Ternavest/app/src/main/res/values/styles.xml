@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Button">
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="Button.Primary">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Button.Rounded">
+        <item name="android:background">@drawable/bg_button_rounded</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawableEnd">@drawable/ic_chevron_right</item>
+        <item name="drawableTint">@color/white</item>
+    </style>
+
+    <style name="Button.Secondary">
+        <item name="android:background">@drawable/bg_button_secondary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Button.Menu">
+        <item name="android:gravity">start|center</item>
+        <item name="iconPadding">16dp</item>
+        <item name="iconGravity">start</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+    </style>
+
+    <style name="Button.Menu.Blue">
+        <item name="android:background">@drawable/bg_button_menu_blue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="Button.Menu.Red">
+        <item name="android:background">@drawable/bg_button_menu_red</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="Button.Menu.White">
+        <item name="android:background">@drawable/bg_button_menu_white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="iconTint">@color/black</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:background">@drawable/bg_edit_text</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHighlight">@color/gray</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/font_nm</item>
+    </style>
+
+    <style name="EditText.MultiLine">
+        <item name="android:inputType">textMultiLine|textCapSentences</item>
+        <item name="android:lines">8</item>
+        <item name="android:maxLines">8</item>
+        <item name="android:singleLine">false</item>
+        <item name="android:gravity">top|start</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:scrollbarStyle">insideInset</item>
+    </style>
+
+    <style name="CardViewPusatBantuan">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_24dp</item>
+        <item name="android:layout_marginStart">@dimen/dimen_24dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+</resources>

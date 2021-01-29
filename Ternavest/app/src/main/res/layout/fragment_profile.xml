@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.both.profile.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/black"
+        android:background="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="Profil" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_profile"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_verification_profile"
+                style="@style/Button.Menu.Red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mohon_verifikasi_email_anda"
+                app:icon="@drawable/ic_warning"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_settings_profile"
+                style="@style/Button.Menu.White"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pengaturan_profil"
+                app:icon="@drawable/ic_settings"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_reset_password_profile"
+                style="@style/Button.Menu.White"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/ganti_kata_sandi"
+                app:icon="@drawable/ic_vpn_key"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_about_profile"
+                style="@style/Button.Menu.White"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tentang_aplikasi"
+                app:icon="@drawable/ic_info"
+                android:layout_marginTop="24dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_logout_profile"
+                style="@style/Button.Menu.White"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/keluar_akun"
+                app:icon="@drawable/ic_exit_to_app"
+                android:layout_marginBottom="24dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

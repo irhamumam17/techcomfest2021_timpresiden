@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/dimen_32"
+    tools:context=".ui.peternak.kelola.laporan.DetailLaporanDialogFragment">
+
+    <ImageView
+        android:id="@+id/pull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_pull"
+        android:layout_centerHorizontal="true"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/pull"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/imgProfile"
+        android:textStyle="bold"
+        android:text="@string/ayam_pullet_bulan"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtTitle"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_edit"
+        tools:ignore="ContentDescription" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="16dp"
+        android:layout_below="@id/txtTitle">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:context=".ui.peternak.kelola.proyek.DetailFragment">
+
+            <TextView
+                android:id="@+id/txtTitleJenisHewan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/iconPemasukan"
+                android:text="@string/pemasukan"
+                android:layout_marginStart="4dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtJenisHewanDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitleJenisHewan"
+                android:layout_alignStart="@+id/txtTitleJenisHewan"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/rp0"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iconPemasukan"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/txtTitleJenisHewan"
+                android:layout_alignBottom="@+id/txtJenisHewanDetail"
+                android:src="@drawable/ic_pemasukan"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtTitlePengeluaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pengeluaran"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtRoiDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTitlePengeluaran"
+                android:layout_alignStart="@+id/txtTitlePengeluaran"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:text="@string/rp0"
+                android:layout_alignParentEnd="true"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/iconPengeluaran"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/txtTitlePengeluaran"
+                android:layout_alignBottom="@+id/txtRoiDetail"
+                android:layout_toStartOf="@+id/txtTitlePengeluaran"
+                android:src="@drawable/ic_pengeluaran" />
+
+            <RelativeLayout
+                android:id="@+id/rel_tanggal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtRoiDetail"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_tanggal">
+
+                <ImageView
+                    android:id="@+id/ic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_access_time_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/txtTanggal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/ic_time"
+                    android:text="@string/_06_01_2021"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtTitleDeskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_below="@id/rel_tanggal"
+                android:layout_marginTop="16dp"
+                android:text="@string/deskripsi_laporan"/>
+
+            <TextView
+                android:id="@+id/txtDeskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_below="@id/txtTitleDeskripsi"
+                android:layout_marginTop="16dp"
+                android:text="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_commodo_cursus_pellentesque_leo_massa_lacus_est_quisque_varius_ipsum_consequat_in_netus_quis"/>
+
+            <ImageView
+                android:id="@+id/imgDeskripsiLaporan"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/txtDeskripsi"
+                android:src="@drawable/upload"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

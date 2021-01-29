@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_project_project"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginVertical="4dp"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/green"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgProyek"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_photo_camera_24"
+            tools:ignore="ContentDescription" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingEnd="8dp"
+            android:layout_toEndOf="@+id/imgProyek"
+            tools:ignore="RtlSymmetry">
+
+            <TextView
+                android:id="@+id/txtNamaProyek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginVertical="2dp"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:layout_marginStart="8dp"
+                android:text="@string/nama_proyek"
+                android:textSize="18sp" />
+
+<!--            <TextView-->
+<!--                android:id="@+id/txtJenisHewan"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/imgLocation"-->
+<!--                android:layout_marginStart="8dp"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:text="@string/jenis_hewan"-->
+<!--                android:textSize="12sp" />-->
+
+            <ImageView
+                android:id="@+id/imgLocation"
+                android:layout_width="@dimen/dimen_16"
+                android:layout_height="@dimen/dimen_16"
+                android:src="@drawable/ic_location_red"
+                android:paddingTop="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_below="@id/txtNamaProyek"/>
+
+            <TextView
+                android:id="@+id/txtKotaProyek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imgLocation"
+                android:layout_toEndOf="@+id/imgLocation"
+                android:layout_marginStart="8dp"
+                android:maxLines="2"
+                android:layout_toStartOf="@+id/txtROI"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Kabupaten Gunung Kidul"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txtROI"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtNamaProyek"
+                android:layout_marginVertical="2dp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginStart="8dp"
+                android:text="@string/_20"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                 />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

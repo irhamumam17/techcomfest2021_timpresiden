@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.both.login.LoginActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/black"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="@string/loading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_masuk"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/ic_ilustrasi_masuk"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/edt_email_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:layout_below="@+id/img_masuk"
+                style="@style/EditText"
+                android:hint="@string/email"
+                android:textSize="@dimen/font_nm"
+                android:textColorHint="@color/black"
+                android:layout_marginBottom="16dp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/edt_password_login"
+                android:layout_below="@id/edt_email_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textSize="@dimen/font_nm"
+                style="@style/EditText"
+                android:hint="@string/kata_sandi"
+                android:textColorHint="@color/black"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/tv_reset_password_login"
+                android:layout_width="119dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edt_password_login"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/lupa_kata_sandi"
+                android:textColor="@color/green"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp" />
+
+            <Button
+                android:id="@+id/btn_email_login"
+                style="@style/Button.Rounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_reset_password_login"
+                android:layout_alignParentEnd="true"
+                android:text="@string/masuk"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/font_nm"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_atau"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_email_login"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/atau"
+                android:textSize="14sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_google_login"
+                style="@style/Button.Secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_atau"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/masuk_dengan_google"
+                android:textAllCaps="false"
+                android:textSize="@dimen/font_nm"
+                app:icon="@drawable/ic_google"
+                app:iconGravity="textStart"
+                app:iconTint="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_google_login"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/txt_questionAkun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/tidak_ada_akun"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_nm" />
+
+                <TextView
+                    android:id="@+id/tv_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/daftar"
+                    android:textColor="@color/green_dark"
+                    android:textSize="@dimen/font_nm" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

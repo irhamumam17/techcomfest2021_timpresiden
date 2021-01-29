@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna kustom -->
+    <color name="green_dark">#00B24B</color>
+    <color name="green">#00DA4B</color>
+    <color name="green_light">#BFF9D2</color>
+
+    <color name="black">#3F3F3F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#BABABA</color>
+
+    <color name="gray_dark">#757575</color>
+    <color name="gray_light">#EFEFEF</color>
+
+    <color name="blue">#5380EE</color>
+    <color name="orange">#FF9900</color>
+    <color name="red">#EF4444</color>
+
+    <color name="white_transparent">#A6FFFFFF</color>
+    <color name="black_transparent">#A6282828</color>
+    <color name="gray_light_transparent">#A6EBEBEB</color>
+    <color name="shimmer">#dddddd</color>
+    <color name="textDescription">#3F3F3F</color>
+
+    <array name="array_dot_active">
+        <item>@color/green_dark</item>
+        <item>@color/green_dark</item>
+        <item>@color/green_dark</item>
+        <item>@color/green_dark</item>
+
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/gray_light</item>
+        <item>@color/gray_light</item>
+        <item>@color/gray_light</item>
+        <item>@color/gray_light</item>
+
+    </array>
+</resources>

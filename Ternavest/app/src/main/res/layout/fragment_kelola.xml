@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.peternak.kelola.proyek.KelolaFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextColor="@android:color/black"
+        android:background="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="Proyek" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerKelola"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/item_proyek_shimmer"/>
+            <include layout="@layout/item_proyek_shimmer"/>
+            <include layout="@layout/item_proyek_shimmer"/>
+            <include layout="@layout/item_proyek_shimmer"/>
+            <include layout="@layout/item_proyek_shimmer"/>
+            <include layout="@layout/item_proyek_shimmer"/>
+            <include layout="@layout/item_proyek_shimmer"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_kelola_proyek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"/>
+
+    <ImageView
+        android:id="@+id/imgProyekKosong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@drawable/ic_proyek_kosong"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="128dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/txtProyekKosong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgProyekKosong"
+        android:visibility="invisible"
+        android:text="@string/kamu_belum_mempunyai_proyek"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnTambahProyek"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:visibility="invisible"
+        android:layout_below="@id/txtProyekKosong"
+        android:layout_marginTop="16dp"
+        android:text="@string/tambahkan_proyek"
+        android:textColor="@android:color/white"
+        android:background="@color/green_dark"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:tint="@android:color/white"
+        app:tint="@android:color/white"
+        android:layout_margin="32dp"
+        android:src="@android:drawable/ic_input_add"
+        android:focusable="true"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>
